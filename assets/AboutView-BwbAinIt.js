@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as c}from"./index-DqmCL-mJ.js";const o={},n={class:"container flex flex-col items-center justify-center bg-slate-300 h-full px-2 mx-auto flex-grow"};function s(r,a){return c(),t("main",n," ABOUT ")}const f=e(o,[["render",s]]);export{f as default};
