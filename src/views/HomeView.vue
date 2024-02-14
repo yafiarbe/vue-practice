@@ -9,7 +9,7 @@
         ><img class="h-24 w-24" src="../assets/svg/Kill-Team.svg" alt="Logo" />
       </RouterLink>
 
-      <p>
+      <p id="part1">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint maxime voluptate totam
         quibusdam? Minus nemo quos accusantium? Perferendis voluptatum similique nostrum maxime!
         Fuga molestiae eaque incidunt? Dicta sint animi, amet harum officiis quod eligendi
