@@ -1,4 +1,6 @@
-# my-build-template-2024
+# vue-practice
+
+https://yafiarbe.github.io/vue-practice/
 
 This template should help get you started developing with Vue 3 in Vite.
 

@@ -1,7 +1,6 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import { HomeIcon, InformationCircleIcon } from '@heroicons/vue/24/outline'
-
 </script>
 
 <template>
