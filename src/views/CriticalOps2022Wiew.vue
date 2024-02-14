@@ -170,7 +170,7 @@
         their effects are specified on the scouting cards.
       </p>
 
-      <table class="w-full border">
+      <table class="w-full border mb-8">
         <caption></caption>
         <thead>
           <tr>
@@ -202,8 +202,8 @@
         The first Turning Point of the battle begins. In the first Initiative phase, initiative is
         determined by the players’ choices in the Scouting step:
       </p>
-      <div>
-        <img src="../assets/image/Scouting2022.webp" alt="" />
+      <div class="flex items-center justify-center mb-8">
+        <img class="object-cover" src="../assets/image/Scouting2022.webp" alt="" />
       </div>
       <h3 class="indent-0 !text-start">11. END THE BATTLE</h3>
       <p>
@@ -215,21 +215,23 @@
         At the end of the battle, the player with the most victory points is the winner of the game.
         If players are tied, the game is a draw.
       </p>
-      <ul class=" text-white">
-        <li class="border-2 border-slate-300 bg-orange-700 p-3">
+      <ul class="text-white mb-10">
+        <li class="border-2 border-slate-300 bg-orange-700 p-3 rounded-md">
           Each player can score a maximum of 4 victory points from the mission objective each
           Turning Point, however each player cannot score more than 16 victory points in total from
           the mission objective during the battle.
         </li>
-        <li class="border-2 border-slate-300 bg-orange-700 p-3">
+        <li class="border-2 border-slate-300 bg-orange-700 p-3 rounded-md">
           Each player can score a maximum of 2 victory points from each Tac Op. Therefore a player’s
           Tac Ops are worth 6 victory points in total.
         </li>
-        <li class="border-2 border-slate-300 bg-orange-700 p-3">
+        <li class="border-2 border-slate-300 bg-orange-700 p-3 rounded-md">
           If every operative on a player’s matched roster is painted to a Battle Ready standard,
           that player scores 2 victory points.
         </li>
-        <li class="border-2 border-slate-300 bg-orange-700 p-3">In total, each player can score a maximum of 24 victory points from the game.</li>
+        <li class="border-2 border-slate-300 bg-orange-700 p-3 rounded-md">
+          In total, each player can score a maximum of 24 victory points from the game.
+        </li>
       </ul>
     </section>
 
