@@ -9,15 +9,21 @@ import { HomeIcon, InformationCircleIcon } from '@heroicons/vue/24/outline'
       class="w-full bg-gradient-to-b from-orange-400 to-orange-500 flex justify-center items-center gap-6 py-2"
     >
       <RouterLink
-        to="/"
+        :to="{ name: 'home' }"
         class="flex items-center gap-2 text-sm font-bold uppercase text-blue-100 hover:text-blue-500 transition-colors"
         >Home <HomeIcon class="h-4 w-4 text-inherit" />
       </RouterLink>
 
       <RouterLink
-        to="/about"
+        :to="{ name: 'about' }"
         class="flex items-center gap-2 text-sm font-bold uppercase text-blue-100 hover:text-blue-500 transition-colors"
         >About <InformationCircleIcon class="h-4 w-4 text-inherit" />
+      </RouterLink>
+
+      <RouterLink
+        :to="{ name: 'CriticalOps2022' }"
+        class="flex items-center gap-2 text-sm font-bold uppercase text-blue-100 hover:text-blue-500 transition-colors"
+        >Critical Ops 2022
       </RouterLink>
     </nav>
   </header>

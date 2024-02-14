@@ -2,19 +2,20 @@
 
 // Импорты плагинов
 // import PluginName from 'PluginName';
-import AspectRatio from '@tailwindcss/aspect-ratio'; // https://github.com/tailwindlabs/tailwindcss-aspect-ratio
-import ContainerQueries from '@tailwindcss/container-queries'; // https://github.com/tailwindlabs/tailwindcss-container-queries
-import ResetForms from '@tailwindcss/forms'; // https://github.com/tailwindlabs/tailwindcss-forms
-
+import AspectRatio from '@tailwindcss/aspect-ratio' // https://github.com/tailwindlabs/tailwindcss-aspect-ratio
+import ContainerQueries from '@tailwindcss/container-queries' // https://github.com/tailwindlabs/tailwindcss-container-queries
+import ResetForms from '@tailwindcss/forms' // https://github.com/tailwindlabs/tailwindcss-forms
 
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{vue,js,ts,jsx,tsx}",
-  ],
+  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    fontFamily: {
+      roboto: ['Roboto', 'sans-serif'],
+      BlackOpsOne: ['Black Ops One', 'sans-serif'],
+      ProtestStrike: ['Protest Strike', 'sans-serif'],
+      FjallaOne: ['Fjalla One', 'sans-serif']
+    },
+    extend: {}
   },
-  plugins: [AspectRatio, ContainerQueries, ResetForms],
+  plugins: [AspectRatio, ContainerQueries, ResetForms]
 }
-

@@ -8,10 +8,10 @@ import TheFooter from '@/components/TheFooter.vue'
 <template>
   <div id="main-wrapper" class="min-h-dvh flex flex-col justify-between">
     <TheHeader />
-    <!-- Отображает роуты -->
-    <div class="flex-grow bg-slate-800 flex flex-col">
+
+    <main class="flex-grow">
       <RouterView />
-    </div>
+    </main>
 
     <TheFooter />
   </div>
