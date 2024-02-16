@@ -9,7 +9,7 @@ import TheFooter from '@/components/TheFooter.vue'
   <div id="main-wrapper" class="min-h-dvh flex flex-col justify-between">
     <TheHeader />
 
-    <main class="flex-grow">
+    <main class="flex-grow pt-12">
       <RouterView />
     </main>
 
