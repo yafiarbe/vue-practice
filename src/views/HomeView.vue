@@ -3,7 +3,7 @@
 <template>
   <main class="h-full">
     <div
-      class="container flex flex-col items-center justify-center bg-slate-300 h-full px-2 mx-auto flex-grow"
+      class="container flex flex-col items-center justify-center bg-slate-100 h-full px-2 mx-auto flex-grow"
     >
       <RouterLink to="/"
         ><img class="h-24 w-24" src="../assets/svg/Kill-Team.svg" alt="Logo" />

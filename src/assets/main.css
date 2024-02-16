@@ -5,7 +5,10 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+body {
   @apply font-roboto;
 }
 
+body {
+  background-color: #444447;
+}

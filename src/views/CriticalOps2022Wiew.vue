@@ -1,8 +1,8 @@
 <script setup></script>
 
 <template>
-  <div class="container mx-auto bg-slate-300 px-2">
-    <h1 class="border-b-2">critical ops 2022</h1>
+  <div class="container mx-auto bg-slate-100 px-2">
+    <h1 class="border-b-2 border-orange-500">critical ops 2022</h1>
     <section id="mission-manager" class="hidden">Mission Manager</section>
 
     <section id="books"><h2>Books</h2></section>
