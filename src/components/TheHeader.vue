@@ -1,22 +1,51 @@
 <script setup>
-import TheNavigationMenu from '@/components/TheNavigationMenu.vue'
-import { Bars4Icon } from '@heroicons/vue/24/solid'
-import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
+import TheNavigationMenu from '@/components/NavigationMenu/TheNavigationMenu.vue'
+import { Bars4Icon } from '@heroicons/vue/24/solid'
+import { ref, onMounted } from 'vue'
 
-const isOpenMenu = ref(false)
-console.log('isOpenMenu', isOpenMenu)
+/* Хуки (1. Когда компонент загружен) */
+onMounted(() => {})
+
+/* Функционал кнопки меню */
+const menuIsOpen = ref(true)
+const classForMenu = ref('right-0')
+const overflow = ref('')
+
+const toggleMenu = () => {
+  menuIsOpen.value = !menuIsOpen.value
+
+  if (menuIsOpen.value) {
+    classForMenu.value = 'right-0'
+    overflow.value = ''
+    console.log(classForMenu.value)
+    // Когда меню открыто
+  } else {
+    // Когда меню закрыто
+    classForMenu.value = '-right-[34%]'
+    overflow.value = ''
+    console.log(classForMenu.value)
+  }
+}
 </script>
 
 <template>
-  <header class="bg-orange-500 fixed w-full">
-    <div class="flex justify-between items-center h-12 pr-2">
-      <RouterLink to="/" class="pl-2">
-        KILL TEAM
-      </RouterLink>
-      <Bars4Icon class="h-8 w-8 transition-all active:scale-75" @click="isOpenMenu = !isOpenMenu" />
+  <header class="bg-orange-500 w-dvw h-14 fixed">
+    <!-- Блок с логотипом и кнопкой меню -->
+    <div class="h-full flex justify-between items-center px-6">
+      <RouterLink to="#">LOGO </RouterLink>
+      <Bars4Icon
+        class="h-10 w-10 border-2 rounded-md active:scale-75 transition-all"
+        @click="toggleMenu()"
+      />
     </div>
-    <TheNavigationMenu v-show="isOpenMenu" class=""/>
+    <!-- /Блок с логотипом и кнопкой меню -->
+    <!-- Навигационное меню -->
+    <TheNavigationMenu
+      :class="classForMenu"
+      class="absolute w-1/3 h-dvh bg-orange-800 top-[100%] transition-all duration-300"
+    />
+    <!-- /Навигационное меню -->
   </header>
 </template>
 

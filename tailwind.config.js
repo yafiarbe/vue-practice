@@ -5,6 +5,8 @@
 import AspectRatio from '@tailwindcss/aspect-ratio' // https://github.com/tailwindlabs/tailwindcss-aspect-ratio
 import ContainerQueries from '@tailwindcss/container-queries' // https://github.com/tailwindlabs/tailwindcss-container-queries
 import ResetForms from '@tailwindcss/forms' // https://github.com/tailwindlabs/tailwindcss-forms
+import plugin from 'tailwindcss/plugin'
+import Animated from 'tailwindcss-animated'
 
 export default {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
@@ -17,5 +19,16 @@ export default {
     },
     extend: {}
   },
-  plugins: [AspectRatio, ContainerQueries, ResetForms]
+  plugins: [
+    AspectRatio,
+    ContainerQueries,
+    ResetForms,
+    Animated,
+    plugin(function ({ addUtilities }) {
+      // Add your custom styles here
+      addUtilities({
+        '': { '': '' }
+      })
+    })
+  ]
 }

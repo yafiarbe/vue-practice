@@ -6,9 +6,10 @@
 @tailwind utilities;
 
 body {
-  @apply font-roboto;
+  @apply font-roboto bg-zinc-900;
 }
 
-body {
-  background-color: #444447;
+.container {
+  @apply bg-slate-50 mx-auto p-4;
 }
+

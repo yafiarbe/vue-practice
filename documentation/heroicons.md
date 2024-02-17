@@ -9,4 +9,5 @@ import { BeakerIcon } from '@heroicons/vue/24/solid'
 import { ChevronDownIcon } from '@heroicons/vue/24/solid'
 </script>
 
+https://heroicons.com/
 https://unpkg.com/browse/@heroicons/vue@2.1.1/24/outline/
