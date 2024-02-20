@@ -1,7 +1,7 @@
-<script setup></script>
+<script setup>
 
-<template>
-  <div class="container"></div>
-</template>
+</script>
+
+<template>logo</template>
 
 <style scoped></style>

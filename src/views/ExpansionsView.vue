@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div class="container">Expansions</div>
+  <section>Expansions</section>
 </template>
 
 <style scoped></style>

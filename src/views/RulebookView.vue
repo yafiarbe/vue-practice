@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div class="container">Rulebook</div>
+  <section>Rulebook</section>
 </template>
 
 <style scoped></style>

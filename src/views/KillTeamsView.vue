@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div class="container">Kill Teams</div>
+  <section>Kill Teams</section>
 </template>
 
 <style scoped></style>

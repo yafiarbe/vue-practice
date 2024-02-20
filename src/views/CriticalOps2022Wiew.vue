@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div class="container mx-auto bg-slate-100 px-2">
+  <div class="bg-slate-100 px-2">
     <h1 class="border-b-2 border-orange-500">critical ops 2022</h1>
     <section id="mission-manager" class="hidden">Mission Manager</section>
 
@@ -261,9 +261,5 @@ p {
 
 ul {
   @apply pb-3;
-}
-
-li::marker {
-  color: #ea580c;
 }
 </style>

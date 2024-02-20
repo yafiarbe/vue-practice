@@ -1,9 +1,7 @@
 <script setup></script>
 
 <template>
-  <div
-    class="container flex flex-col items-center justify-center bg-slate-100 h-full px-2 mx-auto flex-grow"
-  >
+  <div class="flex flex-col items-center justify-center bg-slate-100 h-full px-2 flex-grow">
     <RouterLink to="/"
       ><img class="h-24 w-24" src="../assets/svg/Kill-Team.svg" alt="Logo" />
     </RouterLink>

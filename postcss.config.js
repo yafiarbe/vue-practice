@@ -2,6 +2,10 @@ export default {
   plugins: {
     'postcss-import': {},
     tailwindcss: {},
-    autoprefixer: {}
+    autoprefixer: {
+      overrideBrowserslist: ['last 5 versions'],
+      grid: true,
+      flex: true
+    }
   }
 }

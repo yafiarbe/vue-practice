@@ -1,5 +1,3 @@
-<template>
-ABOUT
-</template>
+<template><section>ABOUT</section></template>
 
 <style></style>

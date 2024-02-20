@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div class="container">Mission Packs</div>
+  <section>MissionPacksView</section>
 </template>
 
 <style scoped></style>
