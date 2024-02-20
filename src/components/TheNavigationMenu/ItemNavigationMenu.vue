@@ -12,7 +12,6 @@ const props = defineProps({
   routers: {}
 })
 const propRout = ref(props.routers)
-
 </script>
 
 <template>

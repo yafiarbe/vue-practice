@@ -3,7 +3,6 @@ import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
 import { inject } from 'vue'
 import { ChevronDownIcon } from '@heroicons/vue/24/solid'
-// import { inject } from 'vue'
 
 const menuBtn = inject('menuStatus')
 const menuBtnRef = ref(menuBtn)
@@ -14,9 +13,6 @@ const props = defineProps({
 })
 const childrens = ref(props.childrensProps)
 const perent = ref(props.perentProps)
-
-console.log('childrensProps(childrens)', childrens)
-console.log('perentProps(perent)', perent)
 </script>
 
 <template>
@@ -24,7 +20,7 @@ console.log('perentProps(perent)', perent)
     <li v-for="item in childrens" :key="item.index" class="list-disc">
       <div class="h-10 w-full flex items-center justify-between">
         <RouterLink
-          class="font-FjallaOne tracking-wider hover:pl-2 transition-all flex-shrink"
+          class="child-router-link font-FjallaOne tracking-wider hover:pl-2 transition-all flex-shrink"
           :to="{ path: perent, hash: item.path }"
           @click="menuBtnRef = !menuBtnRef"
           >{{ item.name }}
@@ -48,6 +44,8 @@ console.log('perentProps(perent)', perent)
   </ul>
 </template>
 
-<style scoped></style>
-
-<!-- import { FooBar as FooBarChild } from './components' -->
+<style scoped>
+.child-router-link {
+  width: calc(100% - 32px);
+}
+</style>

@@ -1,10 +1,8 @@
 <script setup>
-const props = defineProps({
+defineProps({
   title: String,
   cost: String
 })
-
-console.log('props', props)
 </script>
 
 <template>

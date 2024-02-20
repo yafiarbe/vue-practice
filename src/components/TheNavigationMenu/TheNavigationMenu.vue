@@ -5,11 +5,9 @@ import { RouterLink } from 'vue-router'
 import ItemNavigationMenu from '@/components/TheNavigationMenu/ItemNavigationMenu.vue'
 import { Bars4Icon } from '@heroicons/vue/24/solid'
 import router from '@/router/index.js'
-console.log('router', router)
 
 /* Переменные */
 const routers = router.options.routes
-console.log('routers', routers)
 
 /* функционал кнопки бургер меню (toggle) */
 const menuBtn = inject('menuStatus')
@@ -24,9 +22,7 @@ const toggleMenu = () => {
     <div
       class="h-full flex justify-between items-center px-2 text-white uppercase font-bold font-FjallaOne tracking-widest"
     >
-      <RouterLink to="/" class=""
-        >Kill Teams Archives</RouterLink
-      >
+      <RouterLink to="/" class="">Kill Teams Archives</RouterLink>
       <div>ENG</div>
       <button
         @click="toggleMenu"
