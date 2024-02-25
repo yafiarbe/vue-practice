@@ -5,6 +5,17 @@
 /* COMPONENTS IMPORTS */
 import CoreActions from '@/components/CoreRules/CoreActions.vue' // <CoreActions :title="" :cost=""></CoreActions>
 import ActionNormalMove from '@/components/CoreRules/ActionNormalMove.vue'
+import ActionCharge from '@/components/CoreRules/ActionCharge.vue'
+import ActionFallBack from '@/components/CoreRules/ActionFallBack.vue'
+
+import ActionDash from '@/components/CoreRules/ActionDash.vue'
+import ActionPass from '@/components/CoreRules/ActionPass.vue'
+import ActionOverwatch from '@/components/CoreRules/ActionOverwatch.vue'
+import ActionPickUp from '@/components/CoreRules/ActionPickUp.vue'
+import ActionShoot from '@/components/CoreRules/ActionShoot.vue'
+import ActionFight from '@/components/CoreRules/ActionFight.vue'
+
+import InchIcons from '@/components/icons/InchIcons.vue'
 </script>
 
 <template>
@@ -59,10 +70,18 @@ import ActionNormalMove from '@/components/CoreRules/ActionNormalMove.vue'
         <img src="../assets/image/core-rules/combat_gauges.jpg" alt="" class="object-cover" />
       </div>
       <ul>
-        <li>The triangle distance is 1".</li>
-        <li>The circle is 2".</li>
-        <li>The square is 3".</li>
-        <li>The pentagon is 6".</li>
+        <li>
+          <InchIcons :count="1" :value="1" /> The triangle distance is 1".
+        </li>
+        <li>
+          <InchIcons :count="1" :value="2" /> The circle is 2".
+        </li>
+        <li>
+          <InchIcons :count="1" :value="3" /> The square is 3".
+        </li>
+        <li>
+          <InchIcons :count="1" :value="6" /> The pentagon is 6".
+        </li>
       </ul>
       <p>
         Any distances of a symbol without a numerical value correspond to one combat gauge, e.g. .
@@ -294,7 +313,8 @@ import ActionNormalMove from '@/components/CoreRules/ActionNormalMove.vue'
           Engagement Range is the zone of threat that operatives present to their enemies. Many
           rules in the game use Engagement Range, such as when moving and fighting. Engagement Range
           is mutual, therefore operatives are within each other’s Engagement Range if one of them is
-          Visible to and within --1-- of the other.
+          Visible to and within
+          <InchIcons :count="1" :value="1" /> of the other.
         </p>
       </div>
       <div class="bg-orange-600 px-4 py-1 text-white mb-4 rounded-tl-3xl rounded-br-3xl">
@@ -320,7 +340,10 @@ import ActionNormalMove from '@/components/CoreRules/ActionNormalMove.vue'
       </div>
       <div class="bg-orange-600 px-4 py-1 text-white mb-4 rounded-tr-3xl rounded-bl-3xl">
         <h3 class="!text-white">NEW CORE RULE</h3>
-        <p>The Movement characteristic cannot be modified to less than 2--2-- (even if injured).</p>
+        <p>
+          The Movement characteristic cannot be modified to less than
+          <InchIcons :count="2" :value="2" /> (even if injured).
+        </p>
       </div>
       <div class="bg-orange-600 px-4 py-1 text-white rounded-tl-3xl rounded-br-3xl">
         <h3 class="!text-white">FIRE TEAMS</h3>
@@ -350,28 +373,17 @@ import ActionNormalMove from '@/components/CoreRules/ActionNormalMove.vue'
 
     <h4 class="text-center">TURNING POINT</h4>
     <div class="w-28 h-28 relative">
-      <svg
-        class="w-28 h-28 rotate-180 fill-orange-600"
-        version="1.0"
-        xmlns="http://www.w3.org/2000/svg"
-        width="1280.000000pt"
-        height="1130.000000pt"
-        viewBox="0 0 1280.000000 1130.000000"
-        preserveAspectRatio="xMidYMid meet"
-      >
+      <svg class="w-28 h-28 rotate-180 fill-orange-600" version="1.0" xmlns="http://www.w3.org/2000/svg"
+        width="1280.000000pt" height="1130.000000pt" viewBox="0 0 1280.000000 1130.000000"
+        preserveAspectRatio="xMidYMid meet">
         <g transform="translate(0.000000,1130.000000) scale(0.100000,-0.100000)" stroke="none">
-          <path
-            d="M6223 11238 c-13 -6 -36 -32 -52 -57 -16 -25 -510 -878 -1099 -1896
+          <path d="M6223 11238 c-13 -6 -36 -32 -52 -57 -16 -25 -510 -878 -1099 -1896
 -1218 -2107 -2695 -4661 -4078 -7050 -766 -1325 -949 -1648 -952 -1681 -3 -35
 1 -47 26 -75 l30 -34 6172 0 6172 0 29 33 c52 58 46 78 -104 337 -74 127 -492
-849 -929 1605 -2253 3896 -5066 8758 -5078 8776 -29 47 -90 65 -137 42z"
-          />
+849 -929 1605 -2253 3896 -5066 8758 -5078 8776 -29 47 -90 65 -137 42z" />
         </g>
       </svg>
-      <span
-        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[70%] font-bold text-4xl text-white"
-        >1</span
-      >
+      <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[70%] font-bold text-4xl text-white">1</span>
     </div>
     <div class="border-4 w-full text-center pb-4 border-orange-600">
       <h4>INITIATIVE PHASE</h4>
@@ -381,28 +393,17 @@ import ActionNormalMove from '@/components/CoreRules/ActionNormalMove.vue'
       </p>
     </div>
     <div class="w-28 h-28 relative flex items-center justify-center">
-      <svg
-        class="w-28 h-28 rotate-180 fill-orange-600"
-        version="1.0"
-        xmlns="http://www.w3.org/2000/svg"
-        width="1280.000000pt"
-        height="1130.000000pt"
-        viewBox="0 0 1280.000000 1130.000000"
-        preserveAspectRatio="xMidYMid meet"
-      >
+      <svg class="w-28 h-28 rotate-180 fill-orange-600" version="1.0" xmlns="http://www.w3.org/2000/svg"
+        width="1280.000000pt" height="1130.000000pt" viewBox="0 0 1280.000000 1130.000000"
+        preserveAspectRatio="xMidYMid meet">
         <g transform="translate(0.000000,1130.000000) scale(0.100000,-0.100000)" stroke="none">
-          <path
-            d="M6223 11238 c-13 -6 -36 -32 -52 -57 -16 -25 -510 -878 -1099 -1896
+          <path d="M6223 11238 c-13 -6 -36 -32 -52 -57 -16 -25 -510 -878 -1099 -1896
 -1218 -2107 -2695 -4661 -4078 -7050 -766 -1325 -949 -1648 -952 -1681 -3 -35
 1 -47 26 -75 l30 -34 6172 0 6172 0 29 33 c52 58 46 78 -104 337 -74 127 -492
-849 -929 1605 -2253 3896 -5066 8758 -5078 8776 -29 47 -90 65 -137 42z"
-          />
+849 -929 1605 -2253 3896 -5066 8758 -5078 8776 -29 47 -90 65 -137 42z" />
         </g>
       </svg>
-      <span
-        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[70%] font-bold text-4xl text-white"
-        >2</span
-      >
+      <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[70%] font-bold text-4xl text-white">2</span>
     </div>
     <div class="border-4 w-full text-center pb-4 border-orange-600">
       <h4>STRATEGY PHASE</h4>
@@ -414,28 +415,17 @@ import ActionNormalMove from '@/components/CoreRules/ActionNormalMove.vue'
       </p>
     </div>
     <div class="w-28 h-28 relative flex items-center justify-center">
-      <svg
-        class="w-28 h-28 rotate-180 fill-orange-600"
-        version="1.0"
-        xmlns="http://www.w3.org/2000/svg"
-        width="1280.000000pt"
-        height="1130.000000pt"
-        viewBox="0 0 1280.000000 1130.000000"
-        preserveAspectRatio="xMidYMid meet"
-      >
+      <svg class="w-28 h-28 rotate-180 fill-orange-600" version="1.0" xmlns="http://www.w3.org/2000/svg"
+        width="1280.000000pt" height="1130.000000pt" viewBox="0 0 1280.000000 1130.000000"
+        preserveAspectRatio="xMidYMid meet">
         <g transform="translate(0.000000,1130.000000) scale(0.100000,-0.100000)" stroke="none">
-          <path
-            d="M6223 11238 c-13 -6 -36 -32 -52 -57 -16 -25 -510 -878 -1099 -1896
+          <path d="M6223 11238 c-13 -6 -36 -32 -52 -57 -16 -25 -510 -878 -1099 -1896
 -1218 -2107 -2695 -4661 -4078 -7050 -766 -1325 -949 -1648 -952 -1681 -3 -35
 1 -47 26 -75 l30 -34 6172 0 6172 0 29 33 c52 58 46 78 -104 337 -74 127 -492
-849 -929 1605 -2253 3896 -5066 8758 -5078 8776 -29 47 -90 65 -137 42z"
-          />
+849 -929 1605 -2253 3896 -5066 8758 -5078 8776 -29 47 -90 65 -137 42z" />
         </g>
       </svg>
-      <span
-        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[70%] font-bold text-4xl text-white"
-        >3</span
-      >
+      <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[70%] font-bold text-4xl text-white">3</span>
     </div>
     <div class="border-4 w-full text-center pb-4 border-orange-600">
       <h4>FIREFIGHT PHASE</h4>
@@ -550,7 +540,7 @@ import ActionNormalMove from '@/components/CoreRules/ActionNormalMove.vue'
   <article id="firefight-phase">
     <h2>firefight phase</h2>
     <section id="perform-actions">
-      <h3>1. perform actions</h3>
+      <h3>perform actions</h3>
       <p>
         The player who has initiative activates first. They select one ready friendly operative and
         activates it. Once they have completed that operative’s activation, their opponent selects
@@ -652,19 +642,43 @@ import ActionNormalMove from '@/components/CoreRules/ActionNormalMove.vue'
         </li>
       </ul>
       <p>
-        <i
-          >For example, when a KOMMANDO DAKKA BOY performs a Dakka Dash action (see unique actions,
+        <i>For example, when a KOMMANDO DAKKA BOY performs a Dakka Dash action (see unique actions,
           above), it can perform a free Dash and free Shoot action without subtracting any
           additional AP (other than the AP spent on the Dakka Dash action). However, it is subject
           to those actions’ requirements, therefore it cannot perform the free Dash action if it is
           within Engagement Range of enemy operatives, and cannot perform the free Shoot action if
           it is within Engagement Range of enemy operatives or has a Conceal order. In addition, for
           each of the free actions it performs, it cannot perform them again during its
-          activation.</i
-        >
+          activation.</i>
       </p>
 
-      <CoreActions title="Normal Move" cost="1"><ActionNormalMove /></CoreActions>
+      <CoreActions id="action-normal-move" title="Normal Move" cost="1">
+        <ActionNormalMove />
+      </CoreActions>
+      <CoreActions id="action-charge" title="Charge" cost="1">
+        <ActionCharge />
+      </CoreActions>
+      <CoreActions id="action-fall-back" title="Fall Back" cost="1">
+        <ActionFallBack />
+      </CoreActions>
+      <CoreActions id="action-dash" title="Dash" cost="1">
+        <ActionDash />
+      </CoreActions>
+      <CoreActions id="action-pass" title="Pass" cost="1">
+        <ActionPass />
+      </CoreActions>
+      <CoreActions id="action-overwatch" title="Overwatch" cost="0">
+        <ActionOverwatch />
+      </CoreActions>
+      <CoreActions id="action-pick-up" title="Pick Up" cost="1">
+        <ActionPickUp />
+      </CoreActions>
+      <CoreActions id="action-shoot" title="Shoot" cost="1">
+        <ActionShoot />
+      </CoreActions>
+      <CoreActions id="action-fight" title="Fight" cost="1">
+        <ActionFight />
+      </CoreActions>
     </section>
     <section id="">
       <h3></h3>
@@ -725,48 +739,4 @@ import ActionNormalMove from '@/components/CoreRules/ActionNormalMove.vue'
   </article>
 </template>
 
-<style scoped>
-p {
-  @apply mb-2;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  @apply text-orange-600 uppercase font-FjallaOne font-bold;
-}
-
-h1 {
-  @apply mb-2.5 mt-6 text-3xl text-center;
-}
-
-h2 {
-  @apply mb-2 mt-10 text-2xl;
-}
-
-h3 {
-  @apply mb-1 mt-6 text-lg;
-}
-
-h4 {
-  @apply mb-1 mt-6;
-}
-
-h5 {
-  @apply mb-1 mt-6;
-}
-
-h6 {
-  @apply mb-1 mt-6;
-}
-
-ul {
-  @apply mb-4 list-disc ml-6;
-}
-li::marker {
-  @apply text-orange-600;
-}
-</style>
+<style scoped></style>

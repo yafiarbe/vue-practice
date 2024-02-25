@@ -18,7 +18,7 @@ const propRout = ref(props.routers)
   <ul
     id="list-items"
     :class="{ hidden: menuBtnRef, hidden: !menuBtnRef }"
-    class="bg-orange-800 text-white p-8 overflow-auto"
+    class="bg-orange-800 text-white p-8 overflow-auto ml-0"
   >
     <li v-for="(item, index) in propRout" :key="item.name + index">
       <div class="h-10 flex items-center justify-between md:hover:pl-2 transition-all">
