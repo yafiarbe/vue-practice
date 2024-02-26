@@ -32,7 +32,7 @@ const toggleMenu = () => {
       </button>
     </div>
     <!-- Тело меню -->
-    <div>
+    <div class="md:flex md:justify-end">
       <ItemNavigationMenu :routers="routers" />
     </div>
   </nav>

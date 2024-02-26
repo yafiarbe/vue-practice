@@ -110,7 +110,7 @@
       operatives are removed.
     </p>
     <hr />
-    <img src="../../assets/image/core-rules/Shoot1.webp" alt="Action Shoot Example" />
+    <img src="../../../assets/image/core-rules/Shoot1.webp" alt="Action Shoot Example" />
     <ol class="list-decimal marker:font-bold">
       <li>
         <p>
@@ -123,7 +123,7 @@
       <li>
         <p>The attacker rolls their attack dice and the results are as follows:</p>
         <div class="flex justify-center">
-          <img src="../../assets/image/core-rules/Shoot_d1.png" alt="Dice Example" />
+          <img src="../../../assets/image/core-rules/Shoot_d1.png" alt="Dice Example" />
         </div>
         <p>
           The result of 2 is discarded as it does not equal or beat the weapon’s BS characteristic,
@@ -136,7 +136,7 @@
           the results are as follows:
         </p>
         <div class="flex justify-center">
-          <img src="../../assets/image/core-rules/Shoot_d2.png" alt="Dice Example" />
+          <img src="../../../assets/image/core-rules/Shoot_d2.png" alt="Dice Example" />
         </div>
         <p>
           The results of 1 and 3 are discarded as they do not equal or beat the Kommando’s Sv
@@ -150,13 +150,13 @@
           now have no remaining defence dice.
         </p>
         <div class="flex justify-center">
-          <img src="../../assets/image/core-rules/Shoot_d3.png" alt="Dice Example" />
+          <img src="../../../assets/image/core-rules/Shoot_d3.png" alt="Dice Example" />
         </div>
       </li>
       <li>
         <p>The attacker resolves their remaining successful hits.</p>
         <div class="flex justify-center">
-          <img src="../../assets/image/core-rules/Shoot_d4.png" alt="Dice Example" />
+          <img src="../../../assets/image/core-rules/Shoot_d4.png" alt="Dice Example" />
         </div>
         <p>
           The first retained attack dice they resolve is a critical hit (the result of 6), therefore

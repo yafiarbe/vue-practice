@@ -38,7 +38,7 @@ const perent = ref(props.perentProps)
         v-if="item.children && item.open"
         :childrensProps="item.children"
         :perentProps="perentProps"
-        class="pl-6 text-sm"
+        class="text-sm"
       />
     </li>
   </ul>

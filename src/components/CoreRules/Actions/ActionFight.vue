@@ -92,7 +92,7 @@ import ImportantContent from '@/components/ImportantContent.vue'
       <li>
         <p>The attacker and defender roll their attack dice simultaneously. The attacker rolls:</p>
         <div class="flex justify-start">
-          <img src="../../assets/image/core-rules/Fight_d1.webp" alt="Dice Example" />
+          <img src="../../../assets/image/core-rules/Fight_d1.webp" alt="Dice Example" />
         </div>
         <p>
           The results of 1 and 2 are discarded as they do not equal or beat the weapon’s WS
@@ -100,7 +100,7 @@ import ImportantContent from '@/components/ImportantContent.vue'
         </p>
         <p>The defender rolls:</p>
         <div class="flex justify-start">
-          <img src="../../assets/image/core-rules/Fight_d2.png" alt="Dice Example" />
+          <img src="../../../assets/image/core-rules/Fight_d2.png" alt="Dice Example" />
         </div>
         <p>
           The result of 1 is discarded as it does not equal or beat the weapon’s WS characteristic,
@@ -108,7 +108,7 @@ import ImportantContent from '@/components/ImportantContent.vue'
         </p>
         <div>
           <div class="flex justify-center">
-            <img src="../../assets/image/core-rules/CombatSupport1.webp" alt="Dice Example" />
+            <img src="../../../assets/image/core-rules/CombatSupport1.webp" alt="Dice Example" />
           </div>
           <p>
             <i
@@ -130,12 +130,12 @@ import ImportantContent from '@/components/ImportantContent.vue'
           dice is now...
         </p>
         <div class="flex justify-start">
-          <img src="../../assets/image/core-rules/Fight_d3.png" alt="Dice Example" />
+          <img src="../../../assets/image/core-rules/Fight_d3.png" alt="Dice Example" />
         </div>
         <p>...and the defender has no remaining attack dice:</p>
       </li>
       <div class="flex justify-start">
-        <img src="../../assets/image/core-rules/Fight_d4.png" alt="Dice Example" />
+        <img src="../../../assets/image/core-rules/Fight_d4.png" alt="Dice Example" />
       </div>
       <li>
         <p>
@@ -147,7 +147,7 @@ import ImportantContent from '@/components/ImportantContent.vue'
         </p>
         <div>
           <div class="flex justify-center">
-            <img src="../../assets/image/core-rules/CombatSupport2.webp" alt="Dice Example" />
+            <img src="../../../assets/image/core-rules/CombatSupport2.webp" alt="Dice Example" />
           </div>
           <p>
             <i

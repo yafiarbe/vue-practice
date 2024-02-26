@@ -18,10 +18,10 @@ const opacity = ref()
 watchEffect(() => {
   if (menuStatus.value) {
     body.classList.add(eventpointer.value)
-    opacity.value = 'hidden '
+    // opacity.value = 'hidden '
   } else {
     body.classList.remove(eventpointer.value)
-    opacity.value = 'block'
+    // opacity.value = 'block'
   }
 })
 </script>

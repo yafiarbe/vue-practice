@@ -18,34 +18,34 @@ const NavigationMenuRouter = [
         name: 'Tools of War',
         open: false,
         typeListChildren: 'ul',
-        component: () => import('../views/CoreRulesView.vue'),
+        // component: () => import('../views/CoreRulesView.vue'),
         children: [
           {
             path: '#operatives-and-kill-teams',
             name: 'Operatives and Kill Teams',
-            open: true,
-            component: () => import('../views/CoreRulesView.vue')
+            open: true
+            // component: () => import('../views/CoreRulesView.vue')
             // children: []
           },
           {
             path: '#distances',
             name: 'Distances',
-            open: true,
-            component: () => import('../views/CoreRulesView.vue')
+            open: true
+            // component: () => import('../views/CoreRulesView.vue')
             // children: []
           },
           {
             path: '#killzon',
             name: 'Killzon',
-            open: true,
-            component: () => import('../views/CoreRulesView.vue')
+            open: true
+            // component: () => import('../views/CoreRulesView.vue')
             // children: []
           },
           {
             path: '#dice',
             name: 'Dice',
-            open: true,
-            component: () => import('../views/CoreRulesView.vue')
+            open: true
+            // component: () => import('../views/CoreRulesView.vue')
             // children: []
           }
         ]
@@ -55,7 +55,7 @@ const NavigationMenuRouter = [
         name: 'Datacards',
         open: false,
         typeListChildren: 'ul',
-        component: () => import('../views/CoreRulesView.vue'),
+        // component: () => import('../views/CoreRulesView.vue'),
         children: [
           // {path: '', name: '',open: true, component: () => import('../views/CoreRulesView.vue'), children:[]},
           // {path: '', name: '',open: true, component: () => import('../views/CoreRulesView.vue'), children:[]},
@@ -67,15 +67,15 @@ const NavigationMenuRouter = [
         path: '#battle-structure',
         name: 'Battle Structure',
         open: false,
-        typeListChildren: 'ul',
-        component: () => import('../views/CoreRulesView.vue')
+        typeListChildren: 'ul'
+        // component: () => import('../views/CoreRulesView.vue')
       },
       {
         path: '#initiative-phase',
         name: 'Initiative Phase',
         open: false,
         typeListChildren: 'ol',
-        component: () => import('../views/CoreRulesView.vue'),
+        // component: () => import('../views/CoreRulesView.vue'),
         children: [
           // {path: '', name: '',open: true, component: () => import('../views/CoreRulesView.vue'), children:[]},
           // {path: '', name: '',open: true, component: () => import('../views/CoreRulesView.vue'), children:[]},
@@ -86,7 +86,7 @@ const NavigationMenuRouter = [
         name: 'Strategy Phase',
         open: false,
         typeListChildren: 'ol',
-        component: () => import('../views/CoreRulesView.vue'),
+        // component: () => import('../views/CoreRulesView.vue'),
         children: [
           // {path: '', name: '',open: true, component: () => import('../views/CoreRulesView.vue'), children:[]},
         ]
@@ -94,81 +94,81 @@ const NavigationMenuRouter = [
       {
         path: '#firefight-phase',
         name: 'Firefight Phase',
-        open: true,
+        open: false,
         typeListChildren: 'ul',
-        component: () => import('../views/CoreRulesView.vue'),
+        // component: () => import('../views/CoreRulesView.vue'),
         children: [
           {
             path: '#perform-actions',
             name: 'Perform Actions',
-            open: true,
-            component: () => import('../views/CoreRulesView.vue')
+            open: true
+            // component: () => import('../views/CoreRulesView.vue')
           },
           {
             path: '#actions',
             name: 'Actions',
             open: true,
-            component: () => import('../views/CoreRulesView.vue'),
+            // component: () => import('../views/CoreRulesView.vue'),
             children: [
               {
                 path: '#action-normal-move',
                 name: 'Normal Move',
-                open: true,
-                component: () => import('../views/CoreRulesView.vue')
+                open: true
+                // component: () => import('../views/CoreRulesView.vue')
               },
               {
                 path: '#action-fly',
                 name: 'Fly',
-                open: true,
-                component: () => import('../views/CoreRulesView.vue')
+                open: true
+                // component: () => import('../views/CoreRulesView.vue')
               },
               {
                 path: '#action-charge',
                 name: 'Charge',
-                open: true,
-                component: () => import('../views/CoreRulesView.vue')
+                open: true
+                // component: () => import('../views/CoreRulesView.vue')
               },
               {
                 path: '#action-fall-back',
                 name: 'Fall Back',
-                open: true,
-                component: () => import('../views/CoreRulesView.vue')
+                open: true
+                // component: () => import('../views/CoreRulesView.vue')
               },
               {
                 path: '#action-dash',
                 name: 'Dash',
-                open: true,
-                component: () => import('../views/CoreRulesView.vue')
+                open: true
+                // component: () => import('../views/CoreRulesView.vue')
               },
               {
                 path: '#action-pass',
                 name: 'Pass',
-                open: true,
-                component: () => import('../views/CoreRulesView.vue')
+                open: true
+                // component: () => import('../views/CoreRulesView.vue')
               },
               {
                 path: '#action-overwatch',
                 name: 'Overwatch',
-                open: true,
-                component: () => import('../views/CoreRulesView.vue')
+                open: true
+                // component: () => import('../views/CoreRulesView.vue')
               },
               {
                 path: '#action-pick-up',
                 name: 'Pick Up',
-                open: true,
-                component: () => import('../views/CoreRulesView.vue')
+                open: true
+                // component: () => import('../views/CoreRulesView.vue')
               },
               {
                 path: '#action-shoot',
                 name: 'Shoot',
-                open: true,
-                component: () => import('../views/CoreRulesView.vue')
+                open: true
+                // component: () => import('../views/CoreRulesView.vue')
               },
               {
                 path: '#action-fight',
                 name: 'Fight',
-                open: true,
-                component: () => import('../views/CoreRulesView.vue')
+                open: true
+                // component: () => import('../views/CoreRulesView.vue')
               }
             ]
           }
@@ -178,40 +178,80 @@ const NavigationMenuRouter = [
         path: '#wounds-and-damage',
         name: 'Wounds and Damage',
         open: false,
-        typeListChildren: 'ol',
-        component: () => import('../views/CoreRulesView.vue'),
-        children: []
+        typeListChildren: 'ol'
+        // component: () => import('../views/CoreRulesView.vue')
       },
       {
         path: '#controlling-objective-markers-and-tokens',
         name: 'Controlling Objective Markers and Tokens',
         open: false,
-        typeListChildren: 'ul',
-        component: () => import('../views/CoreRulesView.vue'),
-        children: []
+        typeListChildren: 'ul'
+        // component: () => import('../views/CoreRulesView.vue')
       },
       {
         path: '#line-of-sight',
         name: 'Line of Sight',
         open: false,
         typeListChildren: 'ul',
-        component: () => import('../views/CoreRulesView.vue'),
-        children: []
+        // component: () => import('../views/CoreRulesView.vue'),
+        children: [
+          { path: '#visible', name: 'Visible' },
+          { path: '#obscured', name: 'Obscured' },
+          { path: '#cover', name: 'Cover' }
+        ]
       },
       {
         path: '#killzones',
         name: 'Killzones',
         open: false,
         typeListChildren: 'ul',
-        component: () => import('../views/CoreRulesView.vue'),
-        children: []
+        children: [
+          {
+            path: '#moving-through-terrain',
+            name: 'Moving Through Terrain',
+            open: false,
+            typeListChildren: 'ul',
+            children: [
+              {
+                path: '#moving-through-terrain-traverse',
+                name: 'Traverse',
+                open: false,
+                typeListChildren: 'ul'
+              },
+              {
+                path: '#moving-through-terrain-jump',
+                name: 'Jump',
+                open: false,
+                typeListChildren: 'ul'
+              },
+              {
+                path: '#moving-through-terrain-climb',
+                name: 'Climb',
+                open: false,
+                typeListChildren: 'ul'
+              },
+              {
+                path: '#moving-through-terrain-drop',
+                name: 'Drop',
+                open: false,
+                typeListChildren: 'ul'
+              },
+              {
+                path: '#moving-through-terrain-flying-over-terrain',
+                name: 'Flying Over Terrain',
+                open: false,
+                typeListChildren: 'ul'
+              },
+            ]
+          }
+        ]
       },
       {
         path: '#ways-to-play',
         name: 'Ways to Play',
         open: false,
         typeListChildren: 'ul',
-        component: () => import('../views/CoreRulesView.vue'),
+        // component: () => import('../views/CoreRulesView.vue'),
         children: []
       }
     ]

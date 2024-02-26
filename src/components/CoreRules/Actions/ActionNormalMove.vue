@@ -51,7 +51,7 @@ import InchIcons from '@/components/icons/InchIcons.vue'
         its move on top of other operatives (or their bases).
       </p>
     </div>
-    <img src="../../assets/image/core-rules/NormalMove1.webp" alt="Normal move image 1" />
+    <img src="../../../assets/image/core-rules/NormalMove1.webp" alt="Normal move image 1" />
     <i
       ><ol>
         <li>
@@ -66,7 +66,7 @@ import InchIcons from '@/components/icons/InchIcons.vue'
       </ol></i
     >
 
-    <img src="../../assets/image/core-rules/NormalMove2.webp" alt="Normal move image 2" />
+    <img src="../../../assets/image/core-rules/NormalMove2.webp" alt="Normal move image 2" />
     <i>
       <ol>
         <li>

@@ -1,9 +1,3 @@
-<!-- <InchIcons :count="" :value="" />  -->
-
-<script setup>
-import InchIcons from '@/components/icons/InchIcons.vue'
-</script>
-
 <template>
   <section class="p-4">
     <p>
@@ -25,7 +19,7 @@ import InchIcons from '@/components/icons/InchIcons.vue'
       Normal Move or Charge action.
     </p>
     <div>
-      <img src="../../assets/image/core-rules/FallBack.webp" alt="Fall Back Example" />
+      <img src="../../../assets/image/core-rules/FallBack.webp" alt="Fall Back Example" />
       <p><i> Operative A is performing a Fall Back action. It can move within Engagement Range of operative B, and can move within Engagement Range of operative C, but cannot finish the move within Engagement Range of operative B or C, as it cannot finish the move within Engagement Range of an enemy operative. </i></p>
     </div>
   </section>

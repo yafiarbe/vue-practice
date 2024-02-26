@@ -37,7 +37,7 @@ import InchIcons from '@/components/icons/InchIcons.vue'
       the same activation in which it performed the Normal Move, Dash or Fall Back action.
     </p>
     <div>
-      <img src="../../assets/image/core-rules/Charge.webp" alt="Charge" />
+      <img src="../../../assets/image/core-rules/Charge.webp" alt="Charge" />
       <i>
         <ol>
           <li>

@@ -1,25 +1,28 @@
 <script setup>
-/* SCRIPTS IMPORTS */
-// import { onMounted } from 'vue'
-
 /* COMPONENTS IMPORTS */
-import CoreActions from '@/components/CoreRules/CoreActions.vue' // <CoreActions :title="" :cost=""></CoreActions>
-import ActionNormalMove from '@/components/CoreRules/ActionNormalMove.vue'
-import ActionCharge from '@/components/CoreRules/ActionCharge.vue'
-import ActionFallBack from '@/components/CoreRules/ActionFallBack.vue'
-
-import ActionDash from '@/components/CoreRules/ActionDash.vue'
-import ActionPass from '@/components/CoreRules/ActionPass.vue'
-import ActionOverwatch from '@/components/CoreRules/ActionOverwatch.vue'
-import ActionPickUp from '@/components/CoreRules/ActionPickUp.vue'
-import ActionShoot from '@/components/CoreRules/ActionShoot.vue'
-import ActionFight from '@/components/CoreRules/ActionFight.vue'
-
+import CoreActions from '@/components/CoreRules/Actions/CoreActions.vue'
+import ActionNormalMove from '@/components/CoreRules/Actions/ActionNormalMove.vue'
+import ActionCharge from '@/components/CoreRules/Actions/ActionCharge.vue'
+import ActionFallBack from '@/components/CoreRules/Actions/ActionFallBack.vue'
+import ActionDash from '@/components/CoreRules/Actions/ActionDash.vue'
+import ActionPass from '@/components/CoreRules/Actions/ActionPass.vue'
+import ActionOverwatch from '@/components/CoreRules/Actions/ActionOverwatch.vue'
+import ActionPickUp from '@/components/CoreRules/Actions/ActionPickUp.vue'
+import ActionShoot from '@/components/CoreRules/Actions/ActionShoot.vue'
+import ActionFight from '@/components/CoreRules/Actions/ActionFight.vue'
 import InchIcons from '@/components/icons/InchIcons.vue'
+import ImageFlex from '@/components/ImageFlex.vue'
+import ImportantContent from '@/components/ImportantContent.vue'
+
+//
+import MovingThroughTerrain from '@/components/CoreRules/MovingThroughTerrain/MovingThroughTerrain.vue'
 </script>
 
 <template>
-  <h1>Core Rules</h1>
+  <hr class="border-4" />
+  <h1 class="h1-title">Core Rules</h1>
+
+  <hr class="border-4" />
   <article id="tools-of-war">
     <h2>tools of war</h2>
 
@@ -66,23 +69,16 @@ import InchIcons from '@/components/icons/InchIcons.vue'
         measure or other measuring device if they wish by converting the relevant distance below
         into inches, however the game is designed for and explained with graded distances.
       </p>
-      <div class="aspect-video overflow-hidden border-4 mb-2">
-        <img src="../assets/image/core-rules/combat_gauges.jpg" alt="" class="object-cover" />
+      <div class="aspect-video overflow-hidden border-4 mb-2 lg:mb-20 xl:mb-0">
+        <img src="@/assets/image/core-rules/combat_gauges.jpg" alt="" class="object-cover" />
       </div>
       <ul>
-        <li>
-          <InchIcons :count="1" :value="1" /> The triangle distance is 1".
-        </li>
-        <li>
-          <InchIcons :count="1" :value="2" /> The circle is 2".
-        </li>
-        <li>
-          <InchIcons :count="1" :value="3" /> The square is 3".
-        </li>
-        <li>
-          <InchIcons :count="1" :value="6" /> The pentagon is 6".
-        </li>
+        <li><InchIcons :count="1" :value="1" /> The triangle distance is 1".</li>
+        <li><InchIcons :count="1" :value="2" /> The circle is 2".</li>
+        <li><InchIcons :count="1" :value="3" /> The square is 3".</li>
+        <li><InchIcons :count="1" :value="6" /> The pentagon is 6".</li>
       </ul>
+
       <p>
         Any distances of a symbol without a numerical value correspond to one combat gauge, e.g. .
         Multiple combat gauge distances will be specified with a numerical value, e.g. 2.
@@ -156,7 +152,7 @@ import InchIcons from '@/components/icons/InchIcons.vue'
       information it provides below. All of the terms below are then explained in this section.
     </p>
     <div class="aspect-video overflow-hidden border-4">
-      <img src="../assets/image/core-rules/datacard.png" alt="datacards" />
+      <img src="@/assets/image/core-rules/datacard.png" alt="datacards" />
     </div>
 
     <section id="operative-type">
@@ -373,17 +369,28 @@ import InchIcons from '@/components/icons/InchIcons.vue'
 
     <h4 class="text-center">TURNING POINT</h4>
     <div class="w-28 h-28 relative">
-      <svg class="w-28 h-28 rotate-180 fill-orange-600" version="1.0" xmlns="http://www.w3.org/2000/svg"
-        width="1280.000000pt" height="1130.000000pt" viewBox="0 0 1280.000000 1130.000000"
-        preserveAspectRatio="xMidYMid meet">
+      <svg
+        class="w-28 h-28 rotate-180 fill-orange-600"
+        version="1.0"
+        xmlns="http://www.w3.org/2000/svg"
+        width="1280.000000pt"
+        height="1130.000000pt"
+        viewBox="0 0 1280.000000 1130.000000"
+        preserveAspectRatio="xMidYMid meet"
+      >
         <g transform="translate(0.000000,1130.000000) scale(0.100000,-0.100000)" stroke="none">
-          <path d="M6223 11238 c-13 -6 -36 -32 -52 -57 -16 -25 -510 -878 -1099 -1896
+          <path
+            d="M6223 11238 c-13 -6 -36 -32 -52 -57 -16 -25 -510 -878 -1099 -1896
 -1218 -2107 -2695 -4661 -4078 -7050 -766 -1325 -949 -1648 -952 -1681 -3 -35
 1 -47 26 -75 l30 -34 6172 0 6172 0 29 33 c52 58 46 78 -104 337 -74 127 -492
-849 -929 1605 -2253 3896 -5066 8758 -5078 8776 -29 47 -90 65 -137 42z" />
+849 -929 1605 -2253 3896 -5066 8758 -5078 8776 -29 47 -90 65 -137 42z"
+          />
         </g>
       </svg>
-      <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[70%] font-bold text-4xl text-white">1</span>
+      <span
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[70%] font-bold text-4xl text-white"
+        >1</span
+      >
     </div>
     <div class="border-4 w-full text-center pb-4 border-orange-600">
       <h4>INITIATIVE PHASE</h4>
@@ -393,17 +400,28 @@ import InchIcons from '@/components/icons/InchIcons.vue'
       </p>
     </div>
     <div class="w-28 h-28 relative flex items-center justify-center">
-      <svg class="w-28 h-28 rotate-180 fill-orange-600" version="1.0" xmlns="http://www.w3.org/2000/svg"
-        width="1280.000000pt" height="1130.000000pt" viewBox="0 0 1280.000000 1130.000000"
-        preserveAspectRatio="xMidYMid meet">
+      <svg
+        class="w-28 h-28 rotate-180 fill-orange-600"
+        version="1.0"
+        xmlns="http://www.w3.org/2000/svg"
+        width="1280.000000pt"
+        height="1130.000000pt"
+        viewBox="0 0 1280.000000 1130.000000"
+        preserveAspectRatio="xMidYMid meet"
+      >
         <g transform="translate(0.000000,1130.000000) scale(0.100000,-0.100000)" stroke="none">
-          <path d="M6223 11238 c-13 -6 -36 -32 -52 -57 -16 -25 -510 -878 -1099 -1896
+          <path
+            d="M6223 11238 c-13 -6 -36 -32 -52 -57 -16 -25 -510 -878 -1099 -1896
 -1218 -2107 -2695 -4661 -4078 -7050 -766 -1325 -949 -1648 -952 -1681 -3 -35
 1 -47 26 -75 l30 -34 6172 0 6172 0 29 33 c52 58 46 78 -104 337 -74 127 -492
-849 -929 1605 -2253 3896 -5066 8758 -5078 8776 -29 47 -90 65 -137 42z" />
+849 -929 1605 -2253 3896 -5066 8758 -5078 8776 -29 47 -90 65 -137 42z"
+          />
         </g>
       </svg>
-      <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[70%] font-bold text-4xl text-white">2</span>
+      <span
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[70%] font-bold text-4xl text-white"
+        >2</span
+      >
     </div>
     <div class="border-4 w-full text-center pb-4 border-orange-600">
       <h4>STRATEGY PHASE</h4>
@@ -415,17 +433,28 @@ import InchIcons from '@/components/icons/InchIcons.vue'
       </p>
     </div>
     <div class="w-28 h-28 relative flex items-center justify-center">
-      <svg class="w-28 h-28 rotate-180 fill-orange-600" version="1.0" xmlns="http://www.w3.org/2000/svg"
-        width="1280.000000pt" height="1130.000000pt" viewBox="0 0 1280.000000 1130.000000"
-        preserveAspectRatio="xMidYMid meet">
+      <svg
+        class="w-28 h-28 rotate-180 fill-orange-600"
+        version="1.0"
+        xmlns="http://www.w3.org/2000/svg"
+        width="1280.000000pt"
+        height="1130.000000pt"
+        viewBox="0 0 1280.000000 1130.000000"
+        preserveAspectRatio="xMidYMid meet"
+      >
         <g transform="translate(0.000000,1130.000000) scale(0.100000,-0.100000)" stroke="none">
-          <path d="M6223 11238 c-13 -6 -36 -32 -52 -57 -16 -25 -510 -878 -1099 -1896
+          <path
+            d="M6223 11238 c-13 -6 -36 -32 -52 -57 -16 -25 -510 -878 -1099 -1896
 -1218 -2107 -2695 -4661 -4078 -7050 -766 -1325 -949 -1648 -952 -1681 -3 -35
 1 -47 26 -75 l30 -34 6172 0 6172 0 29 33 c52 58 46 78 -104 337 -74 127 -492
-849 -929 1605 -2253 3896 -5066 8758 -5078 8776 -29 47 -90 65 -137 42z" />
+849 -929 1605 -2253 3896 -5066 8758 -5078 8776 -29 47 -90 65 -137 42z"
+          />
         </g>
       </svg>
-      <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[70%] font-bold text-4xl text-white">3</span>
+      <span
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[70%] font-bold text-4xl text-white"
+        >3</span
+      >
     </div>
     <div class="border-4 w-full text-center pb-4 border-orange-600">
       <h4>FIREFIGHT PHASE</h4>
@@ -493,7 +522,7 @@ import InchIcons from '@/components/icons/InchIcons.vue'
 
       <div class="border-2 border-zinc-900">
         <div class="flex justify-between bg-zinc-900 p-2">
-          <h4 class="!m-0">command re-roll</h4>
+          <h4 class="!m-0 text-white">command re-roll</h4>
           <span class="text-white">1CP</span>
         </div>
         <h5 class="px-2"><i>Tactical Ploy</i></h5>
@@ -642,14 +671,16 @@ import InchIcons from '@/components/icons/InchIcons.vue'
         </li>
       </ul>
       <p>
-        <i>For example, when a KOMMANDO DAKKA BOY performs a Dakka Dash action (see unique actions,
+        <i
+          >For example, when a KOMMANDO DAKKA BOY performs a Dakka Dash action (see unique actions,
           above), it can perform a free Dash and free Shoot action without subtracting any
           additional AP (other than the AP spent on the Dakka Dash action). However, it is subject
           to those actions’ requirements, therefore it cannot perform the free Dash action if it is
           within Engagement Range of enemy operatives, and cannot perform the free Shoot action if
           it is within Engagement Range of enemy operatives or has a Conceal order. In addition, for
           each of the free actions it performs, it cannot perform them again during its
-          activation.</i>
+          activation.</i
+        >
       </p>
 
       <CoreActions id="action-normal-move" title="Normal Move" cost="1">
@@ -680,46 +711,642 @@ import InchIcons from '@/components/icons/InchIcons.vue'
         <ActionFight />
       </CoreActions>
     </section>
-    <section id="">
-      <h3></h3>
-      <p></p>
-    </section>
-    <section id="">
-      <h3></h3>
-      <p></p>
-    </section>
   </article>
-  <article id="wounds-and-damage"></article>
-  <article id="controlling-objective-markers-and-tokens"></article>
+  <article id="wounds-and-damage">
+    <h2>WOUNDS AND DAMAGE</h2>
+    <p>
+      All operatives have a starting number of wounds that are used to measure how much damage they
+      can sustain before losing effectiveness and becoming incapacitated. Each time damage is
+      inflicted on an operative, it loses a number of wounds equal to the value of that damage.
+    </p>
+    <p>
+      If an operative’s wounds are reduced to 0 or less, it is incapacitated. When an operative is
+      incapacitated, it is removed from the killzone and you can no longer use its abilities. If an
+      operative is incapacitated during a shooting sequence, it is removed after all shooting
+      attacks from that action have been made, as specified in the shooting sequence. If an
+      operative is incapacitated during a fight sequence, any remaining hits are discarded and not
+      resolved.
+    </p>
+    <hr />
+    <p>
+      Certain objectives and Tac Ops will require friendly operatives to incapacitate enemy
+      operatives, and may even specify the manner in which it must be done (e.g. a shooting attack).
+      This is achieved when a friendly operative performs an action or ability (or, where necessary,
+      the specified action or ability), and as a result of doing so, an enemy operative is
+      incapacitated.
+    </p>
+    <hr />
+    <p>
+      Some rules inflict mortal wounds. Mortal wounds are a powerful source of damage such that
+      rolling defence dice will not help the operative defend against them. Each time an operative
+      suffers a mortal wound, one point of damage is applied to it.
+    </p>
+    <p>
+      If an operative has fewer than half of its wounds remaining, it is injured. While an operative
+      is injured, subtract <InchIcons :count="1" :value="2" /> from its Movement characteristic and
+      worsen the Ballistic Skill and Weapon Skill characteristics of the ranged and melee weapons it
+      is equipped with by 1 respectively.
+    </p>
+    <hr />
+    <p>
+      It is a good idea to mark any lost wounds so that both players can keep track of the damage
+      dealt. Some players will place dice or tokens next to the operative or on its datacard, while
+      others may choose to write it down on a piece of paper.
+    </p>
+    <hr />
+    <div class="flex justify-center">
+      <img src="@/assets/image/core-rules/InjuredToken.webp" alt="Injured Token Example" />
+    </div>
+  </article>
+  <article id="controlling-objective-markers-and-tokens">
+    <h2>CONTROLLING OBJECTIVE MARKERS AND TOKENS</h2>
+    <div>
+      <p>
+        Your operatives will most often be battling for dominance of vital objective markers and
+        tokens. Many rules will require your operatives to control objective markers or tokens in
+        order to interact with them. Friendly operatives control an objective marker or token if the
+        total APL characteristic of friendly operatives within of the centre of it is greater than
+        that of enemy operatives. If an operative is carrying an objective marker or token (see the
+        Pick Up action), it is always in control of it. Finally, unless otherwise specified, when
+        setting up or measuring a distance to an objective marker or token, always measure from its
+        centre. During operatives’ activations, determine control of objective markers and tokens at
+        the start and end of each individual action.
+      </p>
+      <div class="mb-4">
+        <div class="flex justify-center">
+          <img src="@/assets/image/core-rules/Markers1.webp" alt="Markers Token Example" />
+        </div>
+        <p>
+          <i
+            >Operative A is within <InchIcons :count="1" :value="2" /> of the centre of the
+            objective marker for a total APL of 2. Operative B and C are within
+            <InchIcons :count="1" :value="2" /> of the centre of the objective marker for a total
+            APL of 4. Therefore operative B and C control the objective marker.</i
+          >
+        </p>
+      </div>
+      <div class="flex justify-center">
+        <img src="../assets/image/core-rules/Markers2.png" alt="Markers Token Example" />
+      </div>
+      <p>
+        The locations of objective markers on the battlefield are typically shown on the deployment
+        map of the mission being played, and are represented by the icon above.
+      </p>
+      <div class="flex justify-center">
+        <img src="@/assets/image/core-rules/Markers3.webp" alt="Markers Token Example" />
+      </div>
+    </div>
+  </article>
+
   <article id="line-of-sight">
-    <section id="">
-      <h3></h3>
-      <p></p>
-    </section>
-    <section id="">
-      <h3></h3>
-      <p></p>
-    </section>
-    <section id="">
-      <h3></h3>
-      <p></p>
-    </section>
+    <div>
+      <h2>line of sight</h2>
+      <div>
+        <p>
+          Some rules will require an operative (known as the intended target in the following rules)
+          to be in the active operative’s Line of Sight (LoS), such as when selecting a valid target
+          for a shooting attack.
+        </p>
+        <div class="flex flex-col border-2 border-orange-500 p-4 bg-zinc-300">
+          <div class="flex justify-center">
+            <img
+              src="@/assets/image/core-rules/line-of-sight/EngageOrder.png"
+              alt="Engage Order Token"
+            />
+          </div>
+          <div>
+            <p>
+              If the intended target has an Engage order, it is in the active operative’s LoS if it
+              is:
+            </p>
+            <ol>
+              <li>Visible.</li>
+              <li>Not Obscured.</li>
+            </ol>
+          </div>
+        </div>
+        <br />
+        <div class="flex flex-col border-2 border-orange-500 p-4 bg-zinc-300">
+          <div class="flex justify-center">
+            <img
+              src="@/assets/image/core-rules/line-of-sight/EngageOrder.png"
+              alt="Engage Order Token"
+            />
+          </div>
+          <div>
+            <p>
+              If the intended target has a Conceal order, it is in the active operative’s LoS if it
+              is:
+            </p>
+            <ol>
+              <li>Visible</li>
+              <li>Not Obscured</li>
+              <li>Not in Cover.</li>
+            </ol>
+          </div>
+        </div>
+
+        <section id="visible">
+          <h3>visible</h3>
+          <p>For an intended target to be Visible, the following must be true:</p>
+          <ul>
+            <li>
+              You can draw an imaginary, unobstructed straight line (known as a Visibility line) 1
+              mm wide from the head of the active operative’s miniature to any part of the miniature
+              of the intended target (not its base).
+            </li>
+          </ul>
+          <hr />
+          <p>
+            In the rare instance that bases prevent an intended target from being Visible to the
+            active operative, such as when the active operative is directly below or above the
+            intended target, treat those bases as being invisible.
+          </p>
+          <hr />
+          <p>
+            Some rare rules will require you to select a point that is Visible (e.g. a point on the
+            killzone). In such circumstances, you must be able to draw an imaginary, unobstructed
+            straight line 1mm wide from the head of the active operative’s miniature to the point
+            you would select.
+          </p>
+        </section>
+        <section id="obscured">
+          <h3>obscured</h3>
+          <p>
+            Regardless of whether a target operative has an Engage or Conceal order, if an Obscuring
+            terrain feature is in the way, an active operative may be unable to have LoS to them.
+            For an intended target to be Obscured, the following must be true:
+          </p>
+          <ul>
+            <li>
+              The intended target is more than <InchIcons :count="1" :value="2" /> from a point at
+              which a Cover line crosses a terrain feature that is Obscuring (see Terrain Traits).
+              However, if the active operative is within <InchIcons :count="1" :value="1" /> of a
+              point at which a Cover line crosses a terrain feature that is Obscuring, that part of
+              the terrain feature is not treated as Obscuring.
+            </li>
+          </ul>
+        </section>
+        <section id="cover">
+          <h3>cover</h3>
+          <p>
+            If an operative positions themselves in Cover, they will use it for protection while
+            they have an Engage order, or hide behind it while they have a Conceal order. For an
+            intended target to be in Cover, both of the following must be true:
+          </p>
+          <ul>
+            <li>The intended target is more than from the active operative.</li>
+            <li>
+              The intended target is within of a point at which a Cover line crosses another
+              operative’s base (unless that other operative is not itself in the active operative’s
+              LoS), or a terrain feature that provides Cover (see Terrain Traits).
+            </li>
+          </ul>
+          <hr />
+          <p>
+            Note that an intended target that has an Engage order can gain a defensive benefit for
+            being in Cover as specified in the shooting sequence.
+          </p>
+          <hr />
+          <div>
+            <div class="flex justify-center">
+              <img
+                src="@/assets/image/core-rules/line-of-sight/LineOfSight.webp"
+                alt="Line Of Sight"
+              />
+            </div>
+            <p>
+              <i
+                >To establish Cover lines, the active operative’s controlling player draws imaginary
+                straight lines, 1mm wide, from any part of the active operative’s base to every part
+                of the intended target’s base.</i
+              >
+            </p>
+          </div>
+        </section>
+      </div>
+      <div class="inline-flex flex-col border-2 border-orange-500 p-4 my-4 bg-slate-200">
+        <div>
+          <div class="flex justify-center">
+            <img
+              src="@/assets/image/core-rules/line-of-sight/LineOfSight1.webp"
+              alt="Line Of Sight"
+            />
+          </div>
+          <div>
+            <p>
+              <i
+                >A Kommando with an Engage order is visible to the Veteran Guardsman, but a terrain
+                feature that is Obscuring is between them. The Veteran Guardsman is not within
+                <InchIcons :count="1" :value="1" /> of a point at which a Cover line crosses the
+                terrain feature. The Kommando is more than <InchIcons :count="1" :value="2" /> from
+                a point at which a Cover line crosses the terrain feature. Therefore the Kommando is
+                Obscured. It is not in the Veteran Guardsman’s LoS and Is not a valid target for its
+                shooting attack.</i
+              >
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-center">
+            <img
+              src="@/assets/image/core-rules/line-of-sight/LineOfSight2.webp"
+              alt="Line Of Sight"
+            />
+          </div>
+          <div>
+            <p>
+              <i
+                >A Kommando with an Engage order is visible to the Veteran Guardsman, but two
+                terrain features that are Obscuring are between them. The Veteran Guardsman is
+                within <InchIcons :count="1" :value="1" /> of a point at which a Cover line crosses
+                one of the terrain features, therefore the Kommando is not Obscured by that terrain
+                feature. The Kommando is not more than <InchIcons :count="1" :value="2" /> from a
+                point at which a Cover line crosses the other terrain feature, therefore the
+                Kommando is not Obscured by that terrain feature either. It is in the Veteran
+                Guardsman’s LoS and is a valid target for its shooting attack.</i
+              >
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-center">
+            <img
+              src="@/assets/image/core-rules/line-of-sight/LineOfSight3.webp"
+              alt="Line Of Sight"
+            />
+          </div>
+          <div>
+            <p>
+              <i
+                >A Kommando with a Conceal order is visible to the Veteran Guardsman and is not
+                Obscured. The Kommando is both more than <InchIcons :count="1" :value="2" /> from
+                the Veteran Guardsman and within <InchIcons :count="1" :value="1" /> of a point at
+                which a Cover line crosses a terrain feature that provides Cover, therefore it is in
+                Cover. As the Kommando has a Conceal order, it is not in the Veteran Guardsman’s LoS
+                and is not a valid target for its shooting attack.</i
+              >
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-center">
+            <img
+              src="@/assets/image/core-rules/line-of-sight/LineOfSight4.webp"
+              alt="Line Of Sight"
+            />
+          </div>
+          <div>
+            <p>
+              <i
+                >A Kommando with a Conceal order is visible to the Veteran Guardsman and is not
+                Obscured. The Kommando is more than <InchIcons :count="1" :value="2" /> from the
+                Veteran Guardsman, but not within <InchIcons :count="1" :value="1" /> of a point at
+                which a Cover line crosses a terrain feature that provides Cover, therefore it is
+                not in Cover. It is in the Veteran Guardsman’s LoS and is a valid target for its
+                shooting attack.</i
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </article>
+
   <article id="killzones">
-    <section id="">
-      <h3></h3>
+    <section id="killzones">
+      <h2>KILLZONES</h2>
+      <p>
+        Killzones are an essential component of Warhammer 40,000: Kill Team, providing an immersive
+        experience as well as an engaging battlefield for your operatives to fight on. Securing
+        objectives, climbing buildings, vaulting obstacles, taking cover and leaping over gaps are
+        all part of mastering the environments your operatives wage war within. In this section you
+        will find all the rules for the features that makes up your killzone, and how your
+        operatives interact with it.
+      </p>
+      <div>
+        <h3>TERRAIN TRAITS</h3>
+        <p>
+          Killzones will include a multitude of terrain features for your operatives to fight
+          around, and the various parts of each terrain feature have traits that convey certain
+          rules effects. If you create a killzone using a Killzone Environment, each terrain feature
+          will be built in a specific way and the different parts of it will be defined. If your
+          killzone is of your own devising, you and your opponent must define each part of a terrain
+          feature and its accompanying traits. Examples of how to do this can be found here.
+        </p>
+        <div>
+          <h4>HEAVY</h4>
+          <p>Heavy terrain provides Cover and is Obscuring.</p>
+          <h4>LIGHT</h4>
+          <p>Light terrain provides Cover unless otherwise specified (e.g. Vantage Point).</p>
+          <h4>TRAVERSABLE</h4>
+          <p>Traversable terrain can be traversed.</p>
+          <h4>INSIGNIFICANT</h4>
+          <p>
+            Insignificant terrain is terrain too small to have an impact on your operatives and
+            provides no rules.
+          </p>
+          <h4>SCALABLE</h4>
+          <p>
+            This trait can be applied to terrain features more than 2 tall. Each time an operative
+            climbs this terrain feature, the final incremental distance of less than is ignored,
+            instead of being rounded up to .
+          </p>
+          <h4>BARRICADES</h4>
+          <p>
+            Barricades are terrain that players set up before a battle. They are wide and tall. They
+            are Light and Traversable.
+          </p>
+          <div class="flex justify-center">
+            <img src="@/assets/image/core-rules/killzones/Barricades.webp" alt="Barricades" />
+          </div>
+          <h4>VANTAGE POINT</h4>
+          <p>
+            A Vantage Point is a terrain feature with a vertical element (i.e. a level higher than
+            the floor of the killzone) that operatives can be placed upon. If a part of a terrain
+            feature is not defined as a Vantage Point, operatives can climb over or traverse it, but
+            they cannot finish a move or be set up upon it.
+          </p>
+          <p>
+            Each time an operative on a Vantage Point makes a shooting attack, each enemy operative
+            that has a Conceal order that is in Cover provided by Light terrain or another
+            operative, and is at least lower than them, is treated as having an Engage order for
+            that attack instead.
+          </p>
+          <p>
+            Each time a shooting attack is made against an operative on a Vantage Point, for that
+            shooting attack:
+          </p>
+          <ul>
+            <li>
+              The operative cannot use the floor of the Vantage Point as Cover or to be Obscured.
+            </li>
+            <li>
+              The operative cannot use parts of the Vantage Point’s terrain feature that is lower
+              than the operative as Cover or to be Obscured.
+            </li>
+            <p>
+              Instead, the operative must use parts that are the same height as or higher than the
+              operative, such as a rampart or battlement on the Vantage Point.
+            </p>
+          </ul>
+          <div class="inline-flex flex-col border-2 border-orange-500 p-4 my-4 bg-slate-200">
+            <div class="flex justify-center">
+              <img
+                src="@/assets/image/core-rules/killzones/VantagePoint.webp"
+                alt="Vantage Point"
+              />
+            </div>
+            <p>
+              <i
+                ><b>Vantage Point 1: </b>The Kommando on a Vantage Point makes a shooting attack.
+                The Veteran Guardsman has a Conceal order and is in Cover provided by Light terrain.
+                As it is at least <InchIcons :count="1" :value="2" /> lower than the Kommando, the
+                Veteran Guardsman is treated as having an Engage order for that attack instead,
+                making it a valid target for the shooting attack.</i
+              >
+            </p>
+            <p>
+              <i
+                ><b>Vantage Point 2: </b>The Veteran Guardsman makes a shooting attack. The Kommando
+                has a Conceal order and is on a Vantage Point, but as it cannot use the floor of the
+                Vantage Point or parts of the Vantage Point that are lower than it as Cover or to be
+                Obscured, it is a valid target for the shooting attack and cannot use the Vantage
+                Point as Cover.</i
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="moving-through-terrain" class="md:columns-2">
+      <h2>moving through terrain</h2>
+      <div>
+        <p>
+          As your operatives navigate the killzone, terrain features may restrict their movement. To
+          manoeuvre across or over them, your operatives must traverse, climb or jump.
+        </p>
+        <h3>TRAVERSE</h3>
+        <p>
+          A traverse is when an operative must clear a small obstacle in their way such as a
+          barricade or pipe. During an operative’s move, it can ascend and descend terrain with the
+          Traversable trait at a cost of <InchIcons :count="1" :value="2" />, but cannot finish a
+          move on top of it. If this is not possible, it cannot traverse it - it must move around it
+          instead. Note that a traverse is not a climb - the operative simply vaults over the
+          obstacle in their way as it moves horizontally across the killzone.
+        </p>
+        <div class="flex justify-center">
+          <img
+            src="@/assets/image/core-rules/killzones/MovingThroughTerrain1.webp"
+            alt="Moving Through Terrain"
+          />
+        </div>
+        <p>
+          The operative has a M characteristic of <InchIcons :count="3" :value="2" />.
+          <InchIcons :count="1" :value="2" /> of its M characteristic must be used to cross the
+          Traversable terrain feature, meaning the operative can move a total of
+          <InchIcons :count="2" :value="2" />.
+        </p>
+        <h3>JUMP</h3>
+        <p>
+          A jump is when an operative crosses a gap between terrain that is within horizontally and
+          vertically from one edge to the other. The operative must be within of the edge of the
+          terrain feature the operative will jump from. To jump, take a jump test for the operative
+          by rolling one D6: on a 1, the test is unsuccessful, the operative remains where it is and
+          that action ends; on a 2+, the test is successful and you can move the operative across
+          the gap. Only the horizontal distance an operative moves during a jump counts towards how
+          far it has moved. Note that an operative cannot jump instead of climbing. If an operative
+          simply wishes to ascend or descend a terrain feature, it must drop or climb instead.
+        </p>
+        <p>
+          Remember that an operative must finish a move in a location it can be placed. If this is
+          not possible, such as if an operative does not have enough Movement to reach its intended
+          destination, it cannot attempt the jump.
+        </p>
+        <div class="flex justify-center">
+          <img
+            src="@/assets/image/core-rules/killzones/MovingThroughTerrain2.webp"
+            alt="Moving Through Terrain"
+          />
+        </div>
+        <p>
+          The operative intends to cross a gap between two terrain features without dropping and/or
+          climbing. The operative is within <InchIcons :count="1" :value="1" /> of the edge of the
+          terrain feature it will jump from. The gap is within
+          <InchIcons :count="1" :value="3" /> horizontally and
+          <InchIcons :count="1" :value="2" /> vertically from one edge to the other. The operative’s
+          controlling player rolls one D6 and the result is a 5, therefore the test is successful.
+          The operative moves across the gap, and only the horizontal distance it travels is counted
+          for the move.
+        </p>
+        <h3 class="">CLIMB</h3>
+        <p>
+          A climb is when an operative ascends or descends a terrain feature that it cannot traverse
+          across during a move. First, the operative must be within of a physical and climbable part
+          of a terrain feature to climb it - a wall, pipe, chain etc. The operative can then climb
+          that terrain feature, counting the distance it travels towards the total distance it
+          moves, rounding up any incremental distances of less than
+          <InchIcons :count="1" :value="2" /> to <InchIcons :count="1" :value="2" />.
+        </p>
+        <p>
+          Remember that an operative must finish a move in a location it can be placed. If this is
+          not possible, such as if an operative does not have a high enough Movement characteristic
+          to reach its intended destination, it cannot begin the climb. This means an operative
+          cannot finish a move partway through a climb. An operative can, however, perform a Dash
+          action during a climb in order to reach its intended destination.
+        </p>
+
+        <div class="inline-flex flex-col border-2 border-orange-500 p-4 my-4 bg-slate-200">
+          <ImageFlex
+            url="src/assets/image/core-rules/killzones/MovingThroughTerrain3.webp"
+            text="Moving Through Terrain"
+          />
+          <div>
+            <ol>
+              <li>
+                An operative with an M characteristic of <InchIcons :count="3" :value="2" /> intends
+                to climb onto the next level. It is within <InchIcons :count="1" :value="1" /> of a
+                physical part of the terrain feature it can climb.
+              </li>
+              <li>
+                It then climbs the terrain feature. It must move a vertical distance of more than
+                <InchIcons :count="1" :value="2" /> but less than
+                <InchIcons :count="2" :value="2" />. As increments are rounded up, it moves
+                <InchIcons :count="2" :value="2" />
+                vertically.
+              </li>
+              <li>
+                To reach a location it can be placed, it must also move horizontally. The operative
+                has <InchIcons :count="1" :value="2" /> of its M characteristic remaining, allowing
+                it to move onto the next level. You could then move the operative the full
+                <InchIcons :count="1" :value="2" /> distance onto the level.
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="inline-flex flex-col border-2 border-orange-500 p-4 my-4 bg-slate-200">
+          <ImageFlex
+            url="src/assets/image/core-rules/killzones/MovingThroughTerrain4.webp"
+            text="Moving Through Terrain"
+          />
+          <div>
+            <ol>
+              <li>
+                An operative with an M characteristic of <InchIcons :count="3" :value="2" /> intends
+                to climb onto the next level. It first moves <InchIcons :count="1" :value="2" /> to
+                be within <InchIcons :count="1" :value="1" /> of a physical part of a terrain
+                feature it can climb.
+              </li>
+              <li>
+                It then attempts to climb the terrain feature. It must move
+                <InchIcons :count="2" :value="2" /> vertically (increments rounded up) and
+                <InchIcons :count="1" :value="2" /> horizontally. As this would exceed its M
+                characteristic, it cannot begin the climb.
+              </li>
+              <li>
+                If the operative has any action points remaining, however, it could perform a Dash
+                action to complete the climb, so long as it hasn’t already performed a Dash action
+                during its activation.
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <h3>DROP</h3>
+        <p>
+          A drop is when an operative descends from height without climbing. The operative must be
+          within of the edge of the terrain feature it will drop from, and the intended location
+          must be vertically within 3 of the level it occupies. The operative can drop from that
+          terrain feature counting the vertical distance it travels towards the total distance it
+          moves. The vertical distance is measured in increments of , rounding down. Note that a
+          total vertical distance of less than is therefore ignored. An operative can perform a Dash
+          action during a drop in order to reach its intended destination.
+        </p>
+        <p>
+          Remember that an operative cannot move through any part of another operative’s base
+          (unless it can FLY) Therefore if the intended location has any operatives that would
+          prevent the operative moving in that direction, it cannot make the drop.
+        </p>
+
+        <ImportantContent сaption="Flying Over Terrain"
+          ><p>
+            Operatives with the FLY keyword ignore vertical distances when moving on and over
+            terrain features, meaning they do not need to climb or traverse and can move freely
+            across gaps instead of jumping. In addition, when they drop, their intended location can
+            be any vertical distance and the vertical distance they travel does not count towards
+            the total distance they move.
+          </p></ImportantContent
+        >
+
+        <div class="inline-flex flex-col border-2 border-orange-500 p-4 my-4 bg-slate-200">
+          <ImageFlex
+            url="src/assets/image/core-rules/killzones/MovingThroughTerrain5.webp"
+            text="Moving Through Terrain"
+          />
+          <div>
+            <ol>
+              <li>
+                The operative intends to drop to the next level. It first moves
+                <InchIcons :count="1" :value="1" /> to be within
+                <InchIcons :count="1" :value="1" /> of the edge of the terrain feature it will drop
+                from.
+              </li>
+              <li>
+                The operative then drops from that terrain feature. The horizontal distance it moves
+                is measured as normal. The vertical distance it moves is more than
+                <InchIcons :count="1" :value="2" /> but less than
+                <InchIcons :count="2" :value="2" />. As increments are rounded down, it moves
+                <InchIcons :count="1" :value="2" />
+                vertically.
+              </li>
+              <li>
+                After the model has finished the drop, it can complete its move as normal with any
+                remaining M characteristic it has.
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <h3></h3>
+      </div>
+    </section>
+
+    <section id="terrain-traits">
+      <h3>Terrain Traits</h3>
+      <p></p>
+      <div id="terrain-traits-heavy">
+        <h4>Heavy</h4>
+      </div>
+      <div id="terrain-traits-light">
+        <h4>Light</h4>
+      </div>
+      <div id="terrain-traits-traversable">
+        <h4>Traversable</h4>
+      </div>
+      <div id="terrain-traits-insignificant">
+        <h4>Insignificant</h4>
+      </div>
+      <div id="terrain-traits-scalable">
+        <h4>Scalable</h4>
+      </div>
+      <div id="terrain-traits-barricades">
+        <h4>Barricades</h4>
+      </div>
+      <div id="terrain-traits-vantage-point">
+        <h4>Vantage Point</h4>
+      </div>
+    </section>
+
+    <MovingThroughTerrain />
+
+    <section id="example-boards">
+      <h3>Example Boards</h3>
       <p></p>
     </section>
-    <section id="">
-      <h3></h3>
-      <p></p>
-    </section>
-    <section id="">
-      <h3></h3>
-      <p></p>
-    </section>
-    <section id="">
-      <h3></h3>
+
+    <section id="example-terrain-features">
+      <h3>Example Terrain Features</h3>
       <p></p>
     </section>
   </article>
@@ -739,4 +1366,24 @@ import InchIcons from '@/components/icons/InchIcons.vue'
   </article>
 </template>
 
-<style scoped></style>
+<style scoped>
+.h1-title {
+  position: relative;
+}
+.h1-title::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 20px solid transparent;
+  border-left: 20px solid #f97316;
+}
+.h1-title::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 20px solid transparent;
+  border-right: 20px solid #f97316;
+}
+</style>
