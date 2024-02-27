@@ -30,8 +30,8 @@ watchEffect(() => {
   <div id="main-wrapper" class="min-h-dvh flex flex-col justify-between">
     <TheHeader />
 
-    <main :class="opacity" class="flex-grow pt-12">
-      <div class="container">
+    <main :class="opacity" class="flex-grow pt-12 flex flex-col">
+      <div class="container flex-grow">
         <RouterView />
       </div>
     </main>

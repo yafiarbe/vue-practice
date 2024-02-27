@@ -6,7 +6,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="flex justify-center">
-    <img :src="url" :alt="text" />
-  </div>
+  <picture class="flex justify-center">
+    <slot></slot>
+  </picture>
 </template>

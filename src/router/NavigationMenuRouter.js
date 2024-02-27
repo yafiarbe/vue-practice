@@ -241,7 +241,7 @@ const NavigationMenuRouter = [
                 name: 'Flying Over Terrain',
                 open: false,
                 typeListChildren: 'ul'
-              },
+              }
             ]
           }
         ]
@@ -283,6 +283,127 @@ const NavigationMenuRouter = [
     open: true,
     component: () => import('../views/ExpansionsView.vue'),
     children: []
+  },
+  {
+    path: '/criticalops2022',
+    name: 'Critical Ops 2022',
+    open: false,
+    component: () => import('../views/CriticalOps2022Wiew.vue'),
+    children: [
+      {
+        path: '#crit-ops-2022-books',
+        name: 'Books',
+        open: false
+        // typeListChildren: 'ul',
+      },
+      {
+        path: '#crit-ops-2022-matched-play-game-sequence',
+        name: 'Matched Play Game Sequence',
+        open: false,
+        // typeListChildren: 'ul',
+        children: [
+          {
+            path: '#crit-ops-2022-determine-mission-and-map',
+            name: '1. Determine Mission and Map',
+            open: false
+            // typeListChildren: 'ul',
+          },
+          {
+            path: '#crit-ops-2022-set-up-markers-and-killzone',
+            name: '2. Set Up Objective Markers and Killzone',
+            open: false
+            // typeListChildren: 'ul',
+          },
+          {
+            path: '#crit-ops-2022-determine-attacker-and-defender',
+            name: '3. Determine Attacker and Defender',
+            open: false
+            // typeListChildren: 'ul',
+          },
+          {
+            path: '#crit-ops-2022-select-kill-team',
+            name: '4. Select a Kill Team',
+            open: false
+            // typeListChildren: 'ul',
+          },
+          {
+            path: '#crit-ops-2022-select-tac-ops',
+            name: '5. Select Tac Ops',
+            open: false
+            // typeListChildren: 'ul',
+          },
+          {
+            path: '#crit-ops-2022-select-equipment',
+            name: '6. Select Equipment',
+            open: false
+            // typeListChildren: 'ul',
+          },
+          {
+            path: '#crit-ops-2022-set-up-barricades',
+            name: '7. Set Up Barricades',
+            open: false
+            // typeListChildren: 'ul',
+          },
+          {
+            path: '#crit-ops-2022-set-up-operatives',
+            name: '8. Set Up Operatives',
+            open: false
+            // typeListChildren: 'ul',
+          },
+          {
+            path: '#crit-ops-2022-scouting',
+            name: '9. Scouting',
+            open: false
+            // typeListChildren: 'ul',
+          },
+          {
+            path: '#crit-ops-2022-play-the-battle',
+            name: '10. Play the Battle',
+            open: false
+            // typeListChildren: 'ul',
+          },
+          {
+            path: '#crit-ops-2022-end-the-battle',
+            name: '11. End the Battle',
+            open: false
+            // typeListChildren: 'ul',
+          }
+        ]
+      },
+      {
+        path: '#crit-ops-2022-close-quarters',
+        name: 'Crit Ops 2022: Close Quarters',
+        open: false,
+        // typeListChildren: 'ul',
+        children: []
+      },
+      {
+        path: '#crit-ops-2022-card-decks',
+        name: 'Card Decks',
+        open: false,
+        // typeListChildren: 'ul',
+        children: [
+          {
+            path: '#crit-ops-2022-card-decks-close-quarters',
+            name: 'Close Quarters Mission Maps',
+            open: false
+            // typeListChildren: 'ul',
+          },
+          {
+            path: '#crit-ops-2022-card-decks-mission-maps',
+            name: 'Mission Maps',
+            open: false
+            // typeListChildren: 'ul',
+          },
+          {
+            path: '#crit-ops-2022-card-decks-mission-rules',
+            name: 'Mission Rules',
+            open: false
+            // typeListChildren: 'ul',
+          }
+        ]
+      }
+    ]
   }
 ]
 
