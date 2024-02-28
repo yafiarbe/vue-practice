@@ -168,7 +168,7 @@ import ImageFlex from '@/components/ImageFlex.vue'
       their selection starting with the Attacker. The scouting options are below, and their effects
       are specified on the scouting cards.
     </p>
-    <ul class="list-none m-0 p-0 flex flex-col">
+    <ul class="m-0 flex list-none flex-col p-0">
       <li>
         <h4>1. FORTIFY</h4>
         <p>

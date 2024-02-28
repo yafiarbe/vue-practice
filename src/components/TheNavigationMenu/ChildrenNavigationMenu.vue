@@ -2,7 +2,8 @@
 import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
 import { inject } from 'vue'
-import { ChevronDownIcon } from '@heroicons/vue/24/solid'
+import { MinusIcon } from '@heroicons/vue/24/solid'
+import { PlusIcon } from '@heroicons/vue/24/solid'
 
 const menuBtn = inject('menuStatus')
 const menuBtnRef = ref(menuBtn)
@@ -18,19 +19,26 @@ const perent = ref(props.perentProps)
 <template>
   <ul>
     <li v-for="item in childrens" :key="item.index" class="list-disc">
-      <div class="h-10 w-full flex items-center justify-between">
+      <div class="flex h-10 w-full items-center justify-between">
         <RouterLink
-          class="child-router-link font-FjallaOne tracking-wider hover:pl-2 transition-all flex-shrink"
+          class="child-router-link flex-shrink font-FjallaOne tracking-wider transition-all hover:pl-2"
           :to="{ path: perent, hash: item.path }"
           @click="menuBtnRef = !menuBtnRef"
           >{{ item.name }}
         </RouterLink>
-        <div class="h-8 w-8 cursor-pointer pointer-events-auto flex justify-center items-center">
-          <ChevronDownIcon
-            class="h-5 w-5 transition-all"
-            v-if="item.children"
-            :class="{ '-rotate-90': !item.open, 'rotate-0': item.open }"
+        <div
+          v-if="item.children"
+          class="pointer-events-auto flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border-transparent transition-all duration-500 md:border-2"
+        >
+          <PlusIcon
+            v-if="!item.open"
             @click="item.open = !item.open"
+            class="w-3/6 opacity-50 transition-all duration-500"
+          />
+          <MinusIcon
+            v-if="item.open"
+            @click="item.open = !item.open"
+            class="w-3/6 opacity-50 transition-all duration-500"
           />
         </div>
       </div>
@@ -47,5 +55,17 @@ const perent = ref(props.perentProps)
 <style scoped>
 .child-router-link {
   width: calc(100% - 32px);
+}
+
+li > div > a {
+  @apply transition-all duration-300 md:hover:pl-3;
+}
+
+li:hover svg {
+  @apply w-5/6 opacity-100;
+}
+
+li:hover > div > div {
+  @apply border-white border-opacity-70;
 }
 </style>

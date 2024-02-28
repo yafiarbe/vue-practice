@@ -69,7 +69,7 @@ import MovingThroughTerrain from '@/components/CoreRules/MovingThroughTerrain/Mo
         measure or other measuring device if they wish by converting the relevant distance below
         into inches, however the game is designed for and explained with graded distances.
       </p>
-      <div class="aspect-video overflow-hidden border-4 mb-2 lg:mb-20 xl:mb-0">
+      <div class="aspect-video mb-2 overflow-hidden border-4 lg:mb-20 xl:mb-0">
         <img src="@/assets/image/core-rules/combat_gauges.jpg" alt="" class="object-cover" />
       </div>
       <ul>
@@ -303,7 +303,7 @@ import MovingThroughTerrain from '@/components/CoreRules/MovingThroughTerrain/Mo
       </ul>
     </section>
     <section id="additional-information">
-      <div class="bg-orange-600 px-4 py-1 text-white mb-4 rounded-tr-3xl rounded-bl-3xl">
+      <div class="mb-4 rounded-bl-3xl rounded-tr-3xl bg-orange-600 px-4 py-1 text-white">
         <h3 class="!text-white">ENGAGEMENT RANGE</h3>
         <p>
           Engagement Range is the zone of threat that operatives present to their enemies. Many
@@ -313,7 +313,7 @@ import MovingThroughTerrain from '@/components/CoreRules/MovingThroughTerrain/Mo
           <InchIcons :count="1" :value="1" /> of the other.
         </p>
       </div>
-      <div class="bg-orange-600 px-4 py-1 text-white mb-4 rounded-tl-3xl rounded-br-3xl">
+      <div class="mb-4 rounded-br-3xl rounded-tl-3xl bg-orange-600 px-4 py-1 text-white">
         <h3 class="!text-white">MODIFYING CHARACTERISTICS</h3>
         <p>
           Some rules will modify the characteristics of an operative and/or their weapons. All
@@ -334,14 +334,14 @@ import MovingThroughTerrain from '@/components/CoreRules/MovingThroughTerrain/Mo
           operative’s APL, until the end of its next activation it would have an APL of 3.
         </p>
       </div>
-      <div class="bg-orange-600 px-4 py-1 text-white mb-4 rounded-tr-3xl rounded-bl-3xl">
+      <div class="mb-4 rounded-bl-3xl rounded-tr-3xl bg-orange-600 px-4 py-1 text-white">
         <h3 class="!text-white">NEW CORE RULE</h3>
         <p>
           The Movement characteristic cannot be modified to less than
           <InchIcons :count="2" :value="2" /> (even if injured).
         </p>
       </div>
-      <div class="bg-orange-600 px-4 py-1 text-white rounded-tl-3xl rounded-br-3xl">
+      <div class="rounded-br-3xl rounded-tl-3xl bg-orange-600 px-4 py-1 text-white">
         <h3 class="!text-white">FIRE TEAMS</h3>
         <p>
           Many of the kill teams presented in Kill Team: Compendium require you to select your kill
@@ -368,9 +368,9 @@ import MovingThroughTerrain from '@/components/CoreRules/MovingThroughTerrain/Mo
     </p>
 
     <h4 class="text-center">TURNING POINT</h4>
-    <div class="w-28 h-28 relative">
+    <div class="relative h-28 w-28">
       <svg
-        class="w-28 h-28 rotate-180 fill-orange-600"
+        class="h-28 w-28 rotate-180 fill-orange-600"
         version="1.0"
         xmlns="http://www.w3.org/2000/svg"
         width="1280.000000pt"
@@ -388,20 +388,20 @@ import MovingThroughTerrain from '@/components/CoreRules/MovingThroughTerrain/Mo
         </g>
       </svg>
       <span
-        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[70%] font-bold text-4xl text-white"
+        class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[70%] text-4xl font-bold text-white"
         >1</span
       >
     </div>
-    <div class="border-4 w-full text-center pb-4 border-orange-600">
+    <div class="w-full border-4 border-orange-600 pb-4 text-center">
       <h4>INITIATIVE PHASE</h4>
       <p>
         In the Initiative phase, the players ready their kill teams and determine who has the
         initiative for the Turning Point.
       </p>
     </div>
-    <div class="w-28 h-28 relative flex items-center justify-center">
+    <div class="relative flex h-28 w-28 items-center justify-center">
       <svg
-        class="w-28 h-28 rotate-180 fill-orange-600"
+        class="h-28 w-28 rotate-180 fill-orange-600"
         version="1.0"
         xmlns="http://www.w3.org/2000/svg"
         width="1280.000000pt"
@@ -419,11 +419,11 @@ import MovingThroughTerrain from '@/components/CoreRules/MovingThroughTerrain/Mo
         </g>
       </svg>
       <span
-        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[70%] font-bold text-4xl text-white"
+        class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[70%] text-4xl font-bold text-white"
         >2</span
       >
     </div>
-    <div class="border-4 w-full text-center pb-4 border-orange-600">
+    <div class="w-full border-4 border-orange-600 pb-4 text-center">
       <h4>STRATEGY PHASE</h4>
       <p>
         In the Strategy phase, the players generate a valuable but limited resource known as Command
@@ -432,9 +432,9 @@ import MovingThroughTerrain from '@/components/CoreRules/MovingThroughTerrain/Mo
         Ops in this phase for their kill teams to attempt.
       </p>
     </div>
-    <div class="w-28 h-28 relative flex items-center justify-center">
+    <div class="relative flex h-28 w-28 items-center justify-center">
       <svg
-        class="w-28 h-28 rotate-180 fill-orange-600"
+        class="h-28 w-28 rotate-180 fill-orange-600"
         version="1.0"
         xmlns="http://www.w3.org/2000/svg"
         width="1280.000000pt"
@@ -452,11 +452,11 @@ import MovingThroughTerrain from '@/components/CoreRules/MovingThroughTerrain/Mo
         </g>
       </svg>
       <span
-        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[70%] font-bold text-4xl text-white"
+        class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[70%] text-4xl font-bold text-white"
         >3</span
       >
     </div>
-    <div class="border-4 w-full text-center pb-4 border-orange-600">
+    <div class="w-full border-4 border-orange-600 pb-4 text-center">
       <h4>FIREFIGHT PHASE</h4>
       <p>
         In the Firefight phase, the players alternate activating operatives or groups of operatives
@@ -807,7 +807,7 @@ import MovingThroughTerrain from '@/components/CoreRules/MovingThroughTerrain/Mo
           to be in the active operative’s Line of Sight (LoS), such as when selecting a valid target
           for a shooting attack.
         </p>
-        <div class="flex flex-col border-2 border-orange-500 p-4 bg-zinc-300">
+        <div class="flex flex-col border-2 border-orange-500 bg-zinc-300 p-4">
           <div class="flex justify-center">
             <img
               src="@/assets/image/core-rules/line-of-sight/EngageOrder.png"
@@ -826,7 +826,7 @@ import MovingThroughTerrain from '@/components/CoreRules/MovingThroughTerrain/Mo
           </div>
         </div>
         <br />
-        <div class="flex flex-col border-2 border-orange-500 p-4 bg-zinc-300">
+        <div class="flex flex-col border-2 border-orange-500 bg-zinc-300 p-4">
           <div class="flex justify-center">
             <img
               src="@/assets/image/core-rules/line-of-sight/EngageOrder.png"
@@ -925,7 +925,7 @@ import MovingThroughTerrain from '@/components/CoreRules/MovingThroughTerrain/Mo
           </div>
         </section>
       </div>
-      <div class="inline-flex flex-col border-2 border-orange-500 p-4 my-4 bg-slate-200">
+      <div class="my-4 inline-flex flex-col border-2 border-orange-500 bg-slate-200 p-4">
         <div>
           <div class="flex justify-center">
             <img
@@ -1090,7 +1090,7 @@ import MovingThroughTerrain from '@/components/CoreRules/MovingThroughTerrain/Mo
               operative, such as a rampart or battlement on the Vantage Point.
             </p>
           </ul>
-          <div class="inline-flex flex-col border-2 border-orange-500 p-4 my-4 bg-slate-200">
+          <div class="my-4 inline-flex flex-col border-2 border-orange-500 bg-slate-200 p-4">
             <div class="flex justify-center">
               <img
                 src="@/assets/image/core-rules/killzones/VantagePoint.webp"
@@ -1196,7 +1196,7 @@ import MovingThroughTerrain from '@/components/CoreRules/MovingThroughTerrain/Mo
           action during a climb in order to reach its intended destination.
         </p>
 
-        <div class="inline-flex flex-col border-2 border-orange-500 p-4 my-4 bg-slate-200">
+        <div class="my-4 inline-flex flex-col border-2 border-orange-500 bg-slate-200 p-4">
           <ImageFlex
             url="src/assets/image/core-rules/killzones/MovingThroughTerrain3.webp"
             text="Moving Through Terrain"
@@ -1225,7 +1225,7 @@ import MovingThroughTerrain from '@/components/CoreRules/MovingThroughTerrain/Mo
           </div>
         </div>
 
-        <div class="inline-flex flex-col border-2 border-orange-500 p-4 my-4 bg-slate-200">
+        <div class="my-4 inline-flex flex-col border-2 border-orange-500 bg-slate-200 p-4">
           <ImageFlex
             url="src/assets/image/core-rules/killzones/MovingThroughTerrain4.webp"
             text="Moving Through Terrain"
@@ -1279,7 +1279,7 @@ import MovingThroughTerrain from '@/components/CoreRules/MovingThroughTerrain/Mo
           </p></ImportantContent
         >
 
-        <div class="inline-flex flex-col border-2 border-orange-500 p-4 my-4 bg-slate-200">
+        <div class="my-4 inline-flex flex-col border-2 border-orange-500 bg-slate-200 p-4">
           <ImageFlex
             url="src/assets/image/core-rules/killzones/MovingThroughTerrain5.webp"
             text="Moving Through Terrain"
